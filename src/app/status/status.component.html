@@ -1,0 +1,37 @@
+<div class="showInfo flex flex-column">
+  <div class="w-100">
+    <input class="w-100 active-text" type="text" placeholder="add a new mission…" [ngClass]="{'break-text': isBreak}">
+  </div>
+  <div class="showInfo--current w-100 flex">
+    <div class="showInfo--current__size circle"></div>
+    <div class="showInfo--current__text">
+      <span>the first thing tp dp today</span>
+      <ul class="showInfo--progress flex align-items-end">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+  <div class="showInfo--timer showInfo--timer__text w-100 text-primary" [ngClass]="{'text-second': isBreak}">{{ showTime }}</div>
+  <ul class="showInfo--todo">
+    <li class="flex align-items-top w-100">
+      <span class="showInfo--todo__size circle"></span>
+      <p class="showInfo--todo__text">the second thing to do today</p>
+      <span class="showInfo--todo__play flex-grow-1"><i class="material-icons">play_circle_outline</i></span>
+    </li>
+    <li class="flex align-items-top w-100">
+      <span class="showInfo--todo__size circle"></span>
+      <p class="showInfo--todo__text">the second thing to do today</p>
+      <span class="showInfo--todo__play flex-grow-1"><i class="material-icons">play_circle_outline</i></span>
+    </li>
+    <li class="flex align-items-top w-100">
+      <span class="showInfo--todo__size circle"></span>
+      <p class="showInfo--todo__text">the second thing to do today</p>
+      <span class="showInfo--todo__play flex-grow-1"><i class="material-icons">play_circle_outline</i></span>
+    </li>
+    <div class="showInfo--more text-primary" [ngClass]="{'text-second': isBreak}">more</div>
+  </ul>
+</div>

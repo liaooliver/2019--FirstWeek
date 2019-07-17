@@ -1,0 +1,23 @@
+<div class="trigger trigger--outter__border circle border-primary" 
+[ngClass]="{'border-break-primary': isBreak}">
+
+  <div class="trigger--inner circle bg-second border-primary" 
+  [ngClass]="{'bg-white':isActive, 'border-break-primary bg-break-second':isBreak}">
+
+    <div class="trigger--symbol circle text-white border-transparent" 
+    [ngClass]="{'bg-break-second': isBreak, 'bg-second':isActive}">
+
+      <i class="trigger--symbol__play material-icons" 
+      *ngIf="!isActive" (click)="start()">
+        play_circle_filled_white
+      </i>
+
+      <i class="trigger--symbol__puase material-icons" 
+      *ngIf="isActive" (click)="pause()">pause</i>
+
+      <i class="trigger--symbol__square bg-white" 
+      [ngClass]="{'bg-break-second': isBreak ,'bg-second':isActive}"></i>
+      
+    </div>
+  </div>
+</div>

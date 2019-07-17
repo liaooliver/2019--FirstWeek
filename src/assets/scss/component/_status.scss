@@ -1,0 +1,81 @@
+@import '../../scss/variable';
+.showInfo{
+    width: 445px;
+    height: 100%;
+    
+    input{
+        border: none;
+        text-transform:uppercase; 
+        font-style: italic;
+        font-size: 16px;
+        padding: 18px;
+        margin-bottom: 145px;
+        &.active-text::placeholder{
+            color: $active-sec;
+            font-weight: bold;
+        }
+        &.break-text::placeholder{
+            color: $break-sec;
+            font-weight: bold;
+        }
+    }
+
+    
+    &--current{
+        &__text{
+            font-size: 24px;
+            display: inline-block;
+            height: 28px;
+        }
+        &__size{
+            width: 48px;
+            height: 48px;
+            margin-right: 16px;
+        }
+    }
+    &--progress{
+        list-style: none;
+        margin-top: 8px;
+        >li{
+            width: 12px;
+            height: 12px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+    }
+    &--timer{
+        padding: 15px 0px;
+        flex-grow: 1;
+        &__text{
+            font-size: 168px;
+            font-weight: bold;
+        }
+    }
+    &--todo{
+        &__size{
+            width: 19px;
+            height: 19px;
+        }
+        &__text{
+            padding-left: 4px;
+            font-size: 16px;
+            text-transform:uppercase;
+            font-weight: bold;
+        }
+        &__play{
+            text-align: end;
+        }
+        > li {
+            height: 32px;
+            border-bottom: 1px solid #003164;
+            margin-bottom: 9px;
+        }
+    }
+    &--more{
+        font-size: 16px;
+        font-weight: bold;
+        text-align: right;
+        text-transform:uppercase;
+    }
+}

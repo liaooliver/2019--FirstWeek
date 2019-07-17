@@ -1,0 +1,21 @@
+@import '../variable';
+.sideBar{
+    height: 100%;
+    &--iconList{
+        height: 100%;
+        i {
+            margin-bottom: 48px;
+            font-size: 36px;
+            cursor: pointer;
+        }
+        &__vertical{
+            -webkit-writing-mode: vertical-lr;
+            writing-mode: vertical-lr ;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: auto;;
+        }
+    }
+}
+
+
