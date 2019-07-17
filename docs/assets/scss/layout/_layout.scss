@@ -1,0 +1,38 @@
+@import '../../../assets/scss/variable';
+body{
+    background: #ddd;
+}
+
+.container{
+    min-width: 1280px;
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main{
+    height: 100vh;
+    width: 100%;
+    &--content{
+        width: 830px;
+        padding: 48px 85px;
+    }
+    &--side{
+        width: 450px;
+        padding: 48px 85px;
+    }
+    &--timer{
+        width: 540px;
+        height: 540px;
+        position: absolute;
+        top: 50vh;
+        transform: translateY(-50%);
+        right: 170px;
+    }
+}
+
+
+
+
+
+

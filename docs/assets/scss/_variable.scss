@@ -1,0 +1,55 @@
+
+$active-bg:#FFEDF7;
+$active-sec:#FF4384;
+
+$break-bg:#E5F3FF;
+$break-sec:#00A7FF;
+
+$side-bg:#003164;
+
+
+.bg{
+    &-primary{
+        background:$active-bg;
+    }
+    &-second{
+        background:$active-sec;
+    }
+    &-white{
+        background:#fff;
+    }
+    &-break-primary{
+        background:$break-bg;
+    }
+    &-break-second{
+        background:$break-sec;
+    }
+    &-side{
+        background:$side-bg;
+    }
+    
+}
+
+.text{
+    &-primary{
+        color: $active-sec;
+    }
+    &-second{
+        color: $break-sec;
+    }
+    &-white{
+        color: #fff;
+    }
+}
+
+.border{
+    &-primary{
+        border-color: $active-sec;
+    }
+    &-break-primary{
+        border-color: $break-sec;
+    }
+    &-transparent{
+        border-color:transparent;
+    }
+}
