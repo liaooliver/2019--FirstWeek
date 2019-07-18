@@ -1,5 +1,19 @@
-<div class="trigger trigger--outter__border circle border-primary" 
-[ngClass]="{'border-break-primary': isBreak}">
+<div class="trigger trigger--outter trigger--outter__active" 
+[ngClass]="{'trigger--outter__break': isBreak}">
+
+  <svg class="progress-ring" width="540" height="540">
+    <circle class="progress-ring__circle"  
+    stroke-width="18" 
+    fill="transparent" 
+    r="258" 
+    cx="270" 
+    cy="270"
+    [ngStyle]="{
+      'stroke-dashoffset': Dashoffset, 
+      'stroke-dasharray':Dasharray,
+      'stroke':stroke
+    }" />
+  </svg>
 
   <div class="trigger--inner circle bg-second border-primary" 
   [ngClass]="{'bg-white':isActive, 'border-break-primary bg-break-second':isBreak}">

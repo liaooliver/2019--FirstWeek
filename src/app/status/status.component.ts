@@ -24,7 +24,7 @@ export class StatusComponent implements OnInit {
       if(res === true){
         this.interval = setInterval(()=>{
           this.activeTimer()
-        },1)
+        },50)
       }else{
         this.pasue();
       }
@@ -39,11 +39,24 @@ export class StatusComponent implements OnInit {
   }
 
   activeTimer(){
+
     this.totalTime = this.totalTime - 1;
-    
     let min = Math.floor(this.totalTime / 60);
     let sec = this.totalTime % 60;
     this.showTime = `${min < 10 ? '0' + min : min}:${sec < 10 ? '0' + sec : sec}`;
+
+    if (this.type === 'active'){
+      let total = 1500;
+      let percent = (total - this.totalTime) / total;
+      this._status.counter.next(percent);
+    }
+
+    if (this.type === 'break') {
+      let total = 300;
+      let percent = (total - this.totalTime) / total;
+      this._status.counter.next(percent);
+    }
+
     if (this.totalTime === 0){
 
       if (this.type === 'active'){

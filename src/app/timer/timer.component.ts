@@ -9,6 +9,11 @@ export class TimerComponent implements OnInit {
 
   public isActive = false;
   public isBreak = false;
+  public circumference = 258 * 2 * Math.PI;
+  public Dasharray = [this.circumference, this.circumference];
+  public Dashoffset = this.circumference;
+  public stroke = '#FF4384';
+  
 
   constructor(
     private _status: StatusService
@@ -16,6 +21,7 @@ export class TimerComponent implements OnInit {
 
   ngOnInit() {
     this._status.isStart.subscribe(res => {
+      console.log(res, this.isActive)
       if(res === false){
         this.isActive = false
       }
@@ -23,6 +29,17 @@ export class TimerComponent implements OnInit {
     this._status.isBreak.subscribe((res:boolean) => {
       this.isBreak = res
     })
+    this._status.counter.subscribe(res=>{
+      this.setProgress(res)
+    })
+  }
+
+  setProgress(percent) {
+    console.log(percent)
+    const offset = this.circumference - percent * this.circumference;
+    this.Dashoffset = offset;
+    this.isBreak ? this.stroke = '#00A7FF' : this.stroke = '#FF4384';
+    if (percent === 1) this.Dashoffset = this.circumference
   }
 
   start(){

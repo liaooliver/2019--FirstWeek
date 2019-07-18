@@ -8,6 +8,7 @@ export class StatusService {
 
   public isStart = new Subject();
   public isBreak = new Subject();
+  public counter = new Subject();
 
   constructor() { }
 
