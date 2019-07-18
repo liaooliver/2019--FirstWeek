@@ -15,14 +15,15 @@ $side-bg:#003164;
     &-second{
         background:$active-sec;
     }
-    &-white{
-        background:#fff;
-    }
+    
     &-break-primary{
         background:$break-bg;
     }
     &-break-second{
         background:$break-sec;
+    }
+    &-white{
+        background:#fff;
     }
     &-side{
         background:$side-bg;
@@ -45,6 +46,9 @@ $side-bg:#003164;
 .border{
     &-primary{
         border-color: $active-sec;
+        &::before{
+            border-color: $active-sec;
+        }
     }
     &-break-primary{
         border-color: $break-sec;
