@@ -5,9 +5,9 @@
     <circle class="progress-ring__circle"  
     stroke-width="18" 
     fill="transparent" 
-    r="258" 
-    cx="270" 
-    cy="270"
+    [attr.r]="radius" 
+    [attr.cx]="cx" 
+    [attr.cy]="cy"
     [ngStyle]="{
       'stroke-dashoffset': Dashoffset, 
       'stroke-dasharray':Dasharray,

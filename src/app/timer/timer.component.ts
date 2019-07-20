@@ -9,7 +9,10 @@ export class TimerComponent implements OnInit {
 
   public isActive = false;
   public isBreak = false;
-  public circumference = 258 * 2 * Math.PI;
+  public cx = 270;
+  public cy = 270;
+  public radius = 258;
+  public circumference = this.radius * 2 * Math.PI;
   public Dasharray = [this.circumference, this.circumference];
   public Dashoffset = this.circumference;
   public stroke = '#FF4384';
